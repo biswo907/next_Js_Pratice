@@ -1,27 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face{
+  font-family: "roboto";
+  src:local('roboto'),
+     url('./fonts/RobotoSlab-VariableFont_wght.ttf')
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face{
+  font-family: "dancing";
+  src:local('dancing'),
+     url('./fonts/DancingScript-VariableFont_wght.ttf')
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  font-family: roboto;
+  padding: 0;
+  margin: 0;
 }
