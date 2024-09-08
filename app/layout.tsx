@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import { Toaster } from "@/components/ui/toaster";
+import { useRouter } from "next/router";
 
 export const metadata: Metadata = {
   title: "Movie app",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-gray-100">{children}</body>
+      <body className="antialiased bg-gray-100">
+        <main>{children}</main>
+        <Toaster />
+      </body>
     </html>
   );
 }
